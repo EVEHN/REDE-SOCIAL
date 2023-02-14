@@ -1,0 +1,68 @@
+```JavaScript
+// Rede Social ShareMore
+// Código Fonte
+
+// Declaração de recursos
+let stories = [];
+let groups = [];
+let users = [];
+let hashtag = [];
+let filters = [];
+
+// Funções
+function addStory(story) {
+    stories.push(story);
+}
+
+function addGroup(group) {
+    groups.push(group);
+}
+
+function addUser(user) {
+    users.push(user);
+}
+
+function addHashtag(tag) {
+    hashtag.push(tag);
+}
+
+function addFilter(filter) {
+    filters.push(filter);
+}
+
+// Função para compartilhar histórias
+function shareStory(story, groups, users, hashtag) {
+    let sharedStory = {
+        story,
+        groups,
+        users,
+        hashtag
+    };
+
+    addStory(sharedStory);
+}
+
+// Função para compartilhar conteúdos privados
+function sharePrivate(story, users) {
+    let sharedStory = {
+        story,
+        users
+    };
+
+    addStory(sharedStory);
+}
+
+// Função para adicionar filtros divertidos
+function addFunFilter(filter) {
+    addFilter(filter);
+}
+
+// Função para integrar a rede social com outras plataformas
+function shareSocial(story, platforms) {
+    let sharedStory = {
+        story,
+        platforms
+    };
+
+    addStory(sharedStory);
+}
